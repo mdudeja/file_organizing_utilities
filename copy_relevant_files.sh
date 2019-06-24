@@ -1,11 +1,19 @@
 #!/usr/bin/env bash
 
-BASE_FOLDER="../../taals_data/"
-SOURCE_FOLDER="images_flattened"
-TARGET_FOLDER="images_semicircle_re"
+# Base path where all data + folders exist
+BASE_PATH=""
 
-cd $(echo $BASE_FOLDER | tr -d '\r')
+# Source path where to pick files from
+SOURCE_PATH=""
 
-find $SOURCE_FOLDER -type f -name '*semicircle_RE*.png' -exec cp -p {} $TARGET_FOLDER \;
+# Target dir where to copy files to
+TARGET_PATH=""
+
+# File selection criteria (by name)
+FILE_NAME=""
+
+cd $(echo $BASE_PATH | tr -d '\r')
+
+find $SOURCE_PATH -type f -name $FILE_NAME  -exec cp -p {} $TARGET_PATH \;
 
 echo "done"
