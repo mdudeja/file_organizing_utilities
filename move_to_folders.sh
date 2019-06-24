@@ -11,3 +11,5 @@ for f in *.png; do
     mkdir -p "$dir"
     mv "$f" "$dir"
 done
+
+echo "done"
